@@ -101,6 +101,63 @@
   }
   .count b{color:var(--wine);font-size:12.5px;font-weight:700}
 
+  /* ── audio guide */
+  .audio{margin:2px 2px 14px}
+  .audio details{
+    background:linear-gradient(180deg,#FFFDF8 0%,#FBF6EA 100%);
+    border:1px solid var(--line);
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 1px 2px rgba(43,34,28,.045), inset 0 1px 0 rgba(255,255,255,.75);
+  }
+  .audio summary{
+    display:flex;align-items:center;gap:9px;
+    padding:11px 13px 11px 12px;
+    cursor:pointer;list-style:none;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .audio summary::-webkit-details-marker{display:none}
+  .audio summary .ic{
+    width:25px;height:25px;flex:none;border-radius:9px;
+    display:flex;align-items:center;justify-content:center;
+    background:#FBF1DE;border:1px solid #EADCC0;
+  }
+  .audio summary .ic svg{width:13px;height:13px;display:block}
+  .audio summary .t{
+    font-size:12.5px;font-weight:700;color:var(--wine);letter-spacing:-.012em;
+  }
+  .audio summary .t em{
+    font-style:normal;margin-left:4px;
+    font-family:"Nanum Myeongjo","Noto Serif KR",serif;
+    color:var(--gold);font-weight:700;letter-spacing:0;
+  }
+  .audio summary .sub{margin-left:auto;font-size:9.5px;color:#AE9F8B;white-space:nowrap;letter-spacing:.01em;overflow:hidden;text-overflow:ellipsis;min-width:0}
+  @media (max-width:360px){.audio summary .sub{display:none}}
+  .audio summary .chev{
+    width:6.5px;height:6.5px;flex:none;margin-left:9px;margin-top:-3px;
+    border-right:1.5px solid var(--gold-soft);border-bottom:1.5px solid var(--gold-soft);
+    transform:rotate(45deg);transition:transform .22s ease,margin .22s ease;
+  }
+  .audio details[open] summary{border-bottom:1px solid var(--line-soft)}
+  .audio details[open] summary .chev{transform:rotate(-135deg);margin-top:2px}
+  .audio .grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:6px;
+    padding:11px 12px 12px;
+  }
+  .audio .grid a{
+    display:flex;align-items:center;justify-content:center;
+    min-height:44px;border-radius:11px;text-decoration:none;
+    background:#FFFDF8;border:1px solid #EADFC8;
+    color:var(--wine);
+    font-family:"Nanum Myeongjo","Noto Serif KR",serif;
+    font-size:14.5px;font-weight:700;
+    font-variant-numeric:tabular-nums;letter-spacing:.05em;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.85);
+    transition:background .16s,border-color .16s,transform .12s;
+  }
+  .audio .grid a:active{background:#FBF2E0;border-color:var(--gold-soft);transform:scale(.965)}
+  .audio .grid a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
   /* ── sections */
   .sec{padding:22px 2px 4px}
   .sec h2{
@@ -302,6 +359,35 @@
     <div class="orn"><i>MD 34</i></div>
   </header>
 
+  <section class="audio" aria-labelledby="audioGuideTitle">
+    <details open>
+      <summary>
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#A6854B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.5v-2.5a8 8 0 0 1 16 0v2.5"/><rect x="2.6" y="13.6" width="4" height="7" rx="1.7"/><rect x="17.4" y="13.6" width="4" height="7" rx="1.7"/></svg></span>
+        <span class="t" id="audioGuideTitle">오디오 가이드<em>1–16</em></span>
+        <span class="sub">번호를 누르면 새 창에서 재생</span>
+        <span class="chev" aria-hidden="true"></span>
+      </summary>
+      <div class="grid">
+        <a href="https://bespoke-sunshine-513df3.netlify.app/audio/1/" target="_blank" rel="noopener noreferrer" aria-label="1번 오디오 가이드 듣기">01</a>
+        <a href="https://bespoke-sunshine-513df3.netlify.app/audio/2/" target="_blank" rel="noopener noreferrer" aria-label="2번 오디오 가이드 듣기">02</a>
+        <a href="https://bespoke-sunshine-513df3.netlify.app/audio/3/" target="_blank" rel="noopener noreferrer" aria-label="3번 오디오 가이드 듣기">03</a>
+        <a href="https://bespoke-sunshine-513df3.netlify.app/audio/4/" target="_blank" rel="noopener noreferrer" aria-label="4번 오디오 가이드 듣기">04</a>
+        <a href="https://bespoke-sunshine-513df3.netlify.app/audio/5/" target="_blank" rel="noopener noreferrer" aria-label="5번 오디오 가이드 듣기">05</a>
+        <a href="https://bespoke-sunshine-513df3.netlify.app/audio/6/" target="_blank" rel="noopener noreferrer" aria-label="6번 오디오 가이드 듣기">06</a>
+        <a href="https://bespoke-sunshine-513df3.netlify.app/audio/7/" target="_blank" rel="noopener noreferrer" aria-label="7번 오디오 가이드 듣기">07</a>
+        <a href="https://bespoke-sunshine-513df3.netlify.app/audio/8/" target="_blank" rel="noopener noreferrer" aria-label="8번 오디오 가이드 듣기">08</a>
+        <a href="https://bespoke-sunshine-513df3.netlify.app/audio/9/" target="_blank" rel="noopener noreferrer" aria-label="9번 오디오 가이드 듣기">09</a>
+        <a href="https://bespoke-sunshine-513df3.netlify.app/audio/10/" target="_blank" rel="noopener noreferrer" aria-label="10번 오디오 가이드 듣기">10</a>
+        <a href="https://bespoke-sunshine-513df3.netlify.app/audio/11/" target="_blank" rel="noopener noreferrer" aria-label="11번 오디오 가이드 듣기">11</a>
+        <a href="https://bespoke-sunshine-513df3.netlify.app/audio/12/" target="_blank" rel="noopener noreferrer" aria-label="12번 오디오 가이드 듣기">12</a>
+        <a href="https://bespoke-sunshine-513df3.netlify.app/audio/13/" target="_blank" rel="noopener noreferrer" aria-label="13번 오디오 가이드 듣기">13</a>
+        <a href="https://bespoke-sunshine-513df3.netlify.app/audio/14/" target="_blank" rel="noopener noreferrer" aria-label="14번 오디오 가이드 듣기">14</a>
+        <a href="https://bespoke-sunshine-513df3.netlify.app/audio/15/" target="_blank" rel="noopener noreferrer" aria-label="15번 오디오 가이드 듣기">15</a>
+        <a href="https://bespoke-sunshine-513df3.netlify.app/audio/16/" target="_blank" rel="noopener noreferrer" aria-label="16번 오디오 가이드 듣기">16</a>
+      </div>
+    </details>
+  </section>
+
   <div class="toolbar">
     <div class="inner">
       <div class="chips">
@@ -335,7 +421,7 @@
 
   <footer>
     상수리나무 아래 × 잊혀진 들판 · 공식 MD 34종<span class="dot">·</span>공용 체크리스트<br>
-    체크한 내용은 이 기기 브라우저에만 저장돼요<span class="dot">·</span>v3
+    체크한 내용은 이 기기 브라우저에만 저장돼요<span class="dot">·</span>v4
   </footer>
 </div>
 
